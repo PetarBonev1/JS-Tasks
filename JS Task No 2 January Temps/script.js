@@ -5,7 +5,7 @@ const temperatures = {
     "12.01.2015": 30.2, "13.01.2015": 31.2, "14.01.2015": 10.2, "14.02.2015": 10.2
 };
 
-// Функция за изчисляване на средна температура за даден период
+
 function calculateAverageTemperature(dates, temperatures) {
     let sum = 0;
     let count = 0;
@@ -20,7 +20,7 @@ function calculateAverageTemperature(dates, temperatures) {
     return count > 0 ? (sum / count).toFixed(2) : 0;
 }
 
-// Списък с дните за първата и втората седмица на януари
+
 const firstWeekDates = [
     "01.01.2015", "02.01.2015", "03.01.2015", "04.01.2015", "05.01.2015", "06.01.2015", "07.01.2015"
 ];
@@ -28,14 +28,14 @@ const secondWeekDates = [
     "08.01.2015", "09.01.2015", "10.01.2015", "11.01.2015", "12.01.2015", "13.01.2015", "14.01.2015"
 ];
 
-// Изчисляване на средните температури за първата и втората седмица на януари
+
 const firstWeekAvg = calculateAverageTemperature(firstWeekDates, temperatures);
 const secondWeekAvg = calculateAverageTemperature(secondWeekDates, temperatures);
 
-// Дни на седмицата на български език
+
 const daysOfWeek = ["понеделник", "вторник", "сряда", "четвъртък", "петък", "събота", "неделя"];
 
-// Функция за изчисляване на промяната на температурата спрямо предишния ден
+
 function calculateTemperatureChange(dates, temperatures) {
     let result = "";
     let currentDayIndex = 0; // Започваме от понеделник (01.01.2015 е четвъртък, но да приемем, че 01.01. е понеделник)
